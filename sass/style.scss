@@ -1,0 +1,1046 @@
+
+@import "_reset";
+@import "_variables_mixins";
+
+
+body {
+  padding: 4%;
+  margin: 0 auto;
+}
+
+
+// Navbar – – – – – – – – – – –
+
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $fundo;
+  z-index: 1;
+  align-items: center;
+
+  a{
+    cursor:pointer;
+
+    img{
+      height: 30px;
+      margin-left: 5vw;
+      opacity: 0.8;
+    }
+  }
+
+  a:hover{
+
+    img{
+      opacity: 0.5;
+    }
+  }
+
+  ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5vw;
+    margin-left: 30%;
+
+    li{
+      font-family: "Roboto";
+      font-size: 1em;
+      font-weight: 500;
+
+      a{
+        text-decoration: none;
+        color: #000;
+      }
+
+      a:hover{
+        text-decoration: none;
+        color: lighten(#000, 50%);
+      }
+    }
+  }
+}
+
+// Scroll para o topo na Homepage
+
+#top-home{
+  cursor:pointer;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+// Footer – – – – – – – – – – –
+
+footer{
+
+  p{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-size: 0.8em;
+    margin-top: 20px;
+    margin-left: 1vw;
+  }
+}
+
+
+// Index – – – – – – – – – – – – – – – – – – – – – –
+
+// Header – – – – – – – – – – –
+
+header{
+
+  img {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+
+  #boas-vindas{
+    position: absolute;
+    margin-top: 15vw;
+    margin-left: 1vw;
+  }
+
+  span{
+    background: $fundo;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+}
+
+
+// Eventos – – – – – – – – – –
+
+.title{
+  margin-left: 1vw;
+  margin-bottom: 40px;
+  margin-top: 48vw;
+
+  span{
+    background: $fundo;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+  }
+}
+
+#grelha-eventos{
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+
+  .evento{
+    flex: 0 0 31.3%;
+    min-width: 300px;
+    margin-bottom: 40px;
+    padding-left: 1%;
+    padding-right: 1%;
+
+    a{
+      .info-evento{
+        border-bottom: 2px solid #000;
+        padding-bottom: 25px;
+
+        img{
+          width: 100%;
+          opacity: 0.8;
+        }
+
+        .legenda{
+          color: #000;
+          margin-top: 20px;
+          font-family: 'Roboto', sans-serif;
+
+          h1{
+            font-weight: 500;
+            font-size: 1.3em;
+            line-height: 1.3em;
+            margin-bottom: 15px;
+          }
+
+          h2{
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.3em;
+            text-align: left;
+            margin-bottom: 12px;
+          }
+
+          p{
+            font-size: 0.8em;
+            line-height: 0.8em;
+          }
+        }
+      }
+    }
+
+    a:link{
+      text-decoration: none;
+    }
+
+    a:hover {
+
+      h1{
+        color: #000;
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+
+      span{
+        background: $fundo;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      img{
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+    }
+  }
+}
+
+
+// Informações – – – – – – – – – – – – – – – – – – –
+
+
+// Container – – – – – – – – –
+
+.flex-container{  // também pertence à página dos eventos
+  width: 100%;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+
+  #titulo-escondido{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    display: none;
+
+    span{
+      background: $fundo;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+
+  // Sidebar – – – – – – – – – –
+
+  .sidebar{       // também pertence à página dos eventos
+    width: 20%;
+    margin-right: 5%;
+
+    ul{
+
+      li{
+        width: 100%;
+        margin-bottom: 30px;
+        font-family:'Roboto', serif;
+        font-weight: 500;
+        font-size: 1em;
+        letter-spacing: 1px;
+
+        a{
+          color: #000;
+          text-decoration: none;
+
+          span{
+            background: $fundo;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+
+        a:hover{
+          color: lighten(#000, 50%);
+        }
+      }
+    }
+  }
+
+
+  // Conteudo – – – – – – – – –
+
+  #conteudo-informacoes{
+    width: 75%;
+
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.7em;
+      letter-spacing: 1px;
+      margin-bottom: 50px;
+
+      span{
+        background: $fundo;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    p{
+      font-family: 'Roboto', sans-serif;
+      width: 70%;
+      font-size: 1em;
+      line-height: 1.4em;
+    }
+
+    img {
+      width: 97%;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+#mapa{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: 1vw;
+  display: flex;
+
+  #morada{
+    width: 25%;
+
+    p{
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      line-height: 1.8em;
+      text-align: left;
+
+      span{
+        background: $fundo;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  iframe{
+    width: 60%;
+    height: 35vw;
+  }
+}
+
+
+// Cursos – – – – – – – – – – – – – – – – – – – – – –
+
+// Slideshow – – – – – – – – –
+
+.slideshow-container {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.mySlides {
+  width: 100%;
+  display: none;
+  vertical-align: middle;
+}
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin-right: 5px;
+  margin-top: 10px;
+  background-color: lighten(#000, 50%);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, {
+  background-color: #000;
+}
+
+.dot:hover {
+  background-color: lighten(#000, 30%);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+// Conteudo – – – – – – – – –
+
+#title-cursos{
+  margin-top: 50px;
+}
+
+#container-cursos{
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 60px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  .curso{
+    flex: 1 0 50%;
+
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+
+      span{
+        background: $fundo;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    ul{
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      background: $fundo;
+      padding: 20px;
+      margin-right: 20px;
+      margin-bottom: 50px;
+
+      li{
+        line-height: 1.8em;
+
+        a{
+          color: #000;
+        }
+
+        a:hover{
+          color: lighten(#000, 50%);
+        }
+      }
+    }
+  }
+}
+
+
+// Eventos – – – – – – – – – – – – – – – – – – – – –
+
+// Sidebar – – – – – – – – – –
+
+#sidebar-eventos{
+
+  div{
+    border-bottom: 2px solid #000;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+
+    h1{
+      font-family:'Roboto', serif;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// Conteudos – – – – – – – – –
+
+#conteudo-eventos{
+  width: 75%;
+
+  #title-eventos{
+    margin-bottom: 40px;
+
+    span{
+      background: $fundo;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.7em;
+      letter-spacing: 1px;
+    }
+  }
+
+  h1{
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+
+    a{
+      color: #000;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+    }
+
+    a:hover{
+
+      span{
+        background: $fundo;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .subtitulo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.3em;
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 42%;
+  }
+
+  // Eventos – – – – – – – – – –
+
+  .evento{
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 2vw;
+    margin-bottom: 50px;
+
+    .info{
+      width: 80%;
+      margin-right: 20px;
+
+      img{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .legenda{
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 30px;
+
+        h2{
+          font-weight: 400;
+          font-size: 0.9em;
+          line-height: 1.2em;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .descricao{
+      width: 100%;
+      margin-bottom: 15px;
+
+      p{
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        line-height: 1.4em;
+      }
+
+      .etiquetas{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 30px;
+
+        li{
+          font-family:'Roboto', serif;
+          font-size: 0.9em;
+          letter-spacing: 1px;
+          margin-right: 15px;
+          margin-bottom: 30px;
+
+          a{
+            color: #000;
+            text-decoration: none;
+
+            span{
+              background: $fundo;
+              padding-top: 7px;
+              padding-bottom: 7px;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
+
+          a:hover{
+            color: lighten(#000, 50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Seta scroll para o topo – –
+
+#topo{
+  border: none;
+  background: none;
+  cursor:pointer;
+
+  a:hover{
+
+    img{
+      opacity: 0.5;
+      transition: opacity 0.4s ease;
+    }
+  }
+}
+
+#seta{
+  width: 15px;
+  position: fixed;
+  left: 5vw;
+  bottom: 130px;
+}
+
+
+// Pagina Evento – – – – – – – – – – – – – – – – – –
+
+// Conteudos – – – – – – – – –
+
+#conteudo-pagina-evento{
+  width: 100%;
+  margin-top: 60px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  h1{
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+
+      span{
+        background: $fundo;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+    }
+
+  .subtitulo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.3em;
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 42%;
+  }
+
+  .evento{
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 2vw;
+    margin-bottom: 50px;
+
+    .info{
+      width: 80%;
+      margin-right: 40px;
+
+      img{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .legenda{
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 30px;
+
+        h2{
+          font-weight: 400;
+          font-size: 0.9em;
+          line-height: 1.2em;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .descricao{
+      width: 100%;
+      margin-bottom: 15px;
+
+      p{
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        line-height: 1.4em;
+      }
+
+      .etiquetas{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 30px;
+
+        li{
+          font-family:'Roboto', serif;
+          font-size: 0.9em;
+          letter-spacing: 1px;
+          margin-right: 15px;
+          margin-bottom: 30px;
+
+          a{
+            color: #000;
+            text-decoration: none;
+
+            span{
+              background: $fundo;
+              padding-top: 7px;
+              padding-bottom: 7px;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
+
+          a:hover{
+            color: lighten(#000, 50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+    @media only screen and (max-width:650px) {
+  /*Nav*/
+      /*Formatacao logo*/
+      nav a>img {
+      margin-left: 10px;
+      }
+      /*Fim formatacao logo*/
+      /*Formatacao Hamburger*/
+        .nav_items {
+          position:absolute;
+          top:50px; /*50px altura da nav*/
+          left:0px;
+          margin:0px;
+          padding-top:50px;
+          padding-bottom:50px;
+          display: none;
+          background-color: red;
+        }
+
+        .open {
+          background-color:$fundo;
+          display: block !important;
+          opacity: 0.95;
+          width: 100vw;
+          height: auto;
+
+          a {
+            display:block;
+            text-align: center;
+            font-size: 1.2em;
+            padding-bottom: 25px;
+          }
+        }
+
+        .hamburguer-line{
+          width: 40px;
+          height: 5px;
+          background-color: $logo;
+          display: block;
+          margin-bottom: 8px;
+          margin-top:8px;
+          transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger:hover{
+          cursor: pointer;
+        }
+
+        #hamburger-1.is-active .hamburguer-line:nth-child(2){ //seleciona linha do meio e esconde-a
+          opacity: 0;
+        }
+
+        #hamburger-1.is-active .hamburguer-line:nth-child(1){ //seleciona primeira linha e roda-a
+          transform: translateY(13px) rotate(45deg);
+        }
+
+        #hamburger-1.is-active .hamburguer-line:nth-child(3){ //seleciona a ultima linha e roda-a
+          transform: translateY(-13px) rotate(-45deg);
+        }
+
+        #hamburger-1 {
+          position: absolute;
+          top: 0px;
+          right: 10px;
+        }
+
+// PAGINA INDEX
+
+        #boas-vindas {
+
+        h1 {
+          font-size: 2em;
+        }
+      }
+
+      #grelha-eventos{
+
+        .evento{
+          flex: 0 0 100%;
+        }
+      }
+
+      // EVENTO
+
+      #conteudo-pagina-evento {
+
+      .evento {
+        flex-flow: column wrap;
+    }
+   }
+
+// EVENTOS + INFORMACAO
+
+ #conteudo-eventos {
+   width: 90%;
+
+  .evento {
+   flex-flow: column wrap;
+   }
+ }
+
+// CURSOS
+
+.slideshow-container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dot {
+  height: 0px;
+  width: 0px;
+}
+
+#container-cursos{
+  display: flex;
+  flex-flow: column;
+
+  .curso{
+    flex: 0 0 100%;
+  }
+}
+
+// INFORMCACOES + EVENTOS
+
+.flex-container{  // também pertence à página dos eventos
+  width: 100%;
+  display: block;
+  margin-top: 60px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+  .sidebar{       // também pertence à página dos eventos
+    width: 100%;
+    margin-right: 5%;
+  }
+
+} // FIM
+
+
+
+    /* MOBILE */
+    @media only screen and (max-width:480px) {
+
+ // INDEX
+
+      #boas-vindas {
+
+      h1 {
+        font-size: 1.5em;
+      }
+     }
+
+// EVENTOS
+
+#conteudo-eventos {
+
+ .evento {
+  flex-flow: column wrap;
+  }
+ }
+
+ .slideshow-container {
+   width: 100vw;
+ }
+
+ .dot {
+   height: 0px;
+   width: 0px;
+ }
+
+// CURSOS
+
+#container-cursos{
+  display: flex;
+  flex-flow: column;
+
+  .curso{
+    flex: 0 0 100%;
+  }
+}
+
+
+} // FIM MOBILE
+
+
+/* TABLET/IPAD */
+@media only screen  and (min-width : 650px) and (max-width:990px) {
+
+// INDEX
+
+  #grelha-eventos{
+
+    .evento {
+      flex: 0 0 48%;
+    }
+  }
+
+
+} //FIM TABLET
+
+
+
+@media only screen and (max-width:1130px) {
+
+  #mapa{
+    display: block;
+
+    #morada{
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width:1055px) {
+
+  #flex-container-informacoes{
+    display: block;
+
+    #titulo-escondido{
+      display: inherit;
+    }
+  }
+
+  #sidebar-informacoes{
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  #vai-desaparecer{
+    display: none;
+  }
+
+  #conteudo-informacoes{
+      width: 100%;
+      display: block;
+
+      img{
+        width: 100%;
+      }
+  }
+}
+
+
+@media only screen and (max-width:800px) {
+
+  #sidebar-eventos{
+    display: none;
+  }
+
+  #topo{
+    opacity: 0;
+}
+
+}
